@@ -1,0 +1,12 @@
+.forecast-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.forecast-card {
+  width: 150px;
+  text-align: center;
+}

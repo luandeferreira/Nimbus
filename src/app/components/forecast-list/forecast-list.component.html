@@ -1,0 +1,13 @@
+<div class="forecast-container">
+  <mat-card *ngFor="let day of forecastDays" class="forecast-card">
+    <mat-card-header>
+      <mat-card-title>{{ day.date | date:'dd/MM' }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <img [src]="day.day.condition.icon" [alt]="day.day.condition.text">
+      <p><strong>Máx:</strong> {{ day.day.maxtemp_c }}°C</p>
+      <p><strong>Mín:</strong> {{ day.day.mintemp_c }}°C</p>
+      <p>{{ day.day.condition.text }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

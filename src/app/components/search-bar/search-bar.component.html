@@ -1,0 +1,18 @@
+<div class="search-container">
+  <mat-form-field appearance="outline">
+    <mat-label>{{ 'SEARCH_PLACEHOLDER' | translate }}</mat-label>
+    <input matInput
+           [formControl]="searchControl"
+           [matAutocomplete]="auto"
+           (keyup.enter)="onSearch(searchControl.value || '')">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onSearch($event.option.value.name)">
+      <mat-option *ngFor="let city of filteredCities$ | async" [value]="city">
+        {{ city.name }}, {{ city.country }}
+      </mat-option>
+    </mat-autocomplete>
+    <div *ngIf="isLoading" class="spinner-container">
+      <mat-spinner [diameter]="24"></mat-spinner>
+    </div>
+    <mat-icon matSuffix *ngIf="!isLoading">search</mat-icon>
+  </mat-form-field>
+</div>

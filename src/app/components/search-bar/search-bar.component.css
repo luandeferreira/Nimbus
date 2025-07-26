@@ -1,0 +1,16 @@
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.spinner-container {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,88 @@
+.weather-card-container {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #2B303A;
+}
+
+.card-header p {
+  margin: 5px 0 0;
+  color: #6A7587;
+  font-size: 1rem;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #2B303A;
+}
+
+.condition {
+  text-align: center;
+}
+
+.condition-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.condition p {
+  margin: 5px 0 0;
+  color: #6A7587;
+  text-transform: capitalize;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #EEE;
+  padding-top: 15px;
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-item span {
+  display: block;
+  color: #6A7587;
+  font-size: 0.9rem;
+}
+
+.detail-item strong {
+  color: #2B303A;
+  font-size: 1.1rem;
+}
+
+/* Dynamic Icon Colors */
+.icon-sunny {
+  filter: drop-shadow(0 0 5px #FFC300);
+}
+
+.icon-rainy {
+  filter: drop-shadow(0 0 5px #0096C7);
+}
+
+.icon-cloudy {
+  filter: drop-shadow(0 0 5px #6A7587);
+}

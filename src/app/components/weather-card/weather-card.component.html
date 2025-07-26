@@ -1,0 +1,29 @@
+<div class="weather-card-container" *ngIf="current && location">
+  <div class="card-header">
+    <h2>{{ location.name }}, {{ location.region }}</h2>
+    <p>{{ 'CURRENT_WEATHER' | translate }}</p>
+  </div>
+  <div class="card-content">
+    <div class="temperature">
+      {{ current.temp_c | number:'1.0-0' }}&deg;C
+    </div>
+    <div class="condition">
+      <img [src]="current.condition.icon" [alt]="current.condition.text" class="condition-icon" [ngClass]="getConditionClass(current.condition.text)">
+      <p>{{ current.condition.text }}</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="detail-item">
+      <span>Feels like</span>
+      <strong>{{ current.feelslike_c | number:'1.0-0' }}&deg;C</strong>
+    </div>
+    <div class="detail-item">
+      <span>Wind</span>
+      <strong>{{ current.wind_kph }} km/h</strong>
+    </div>
+    <div class="detail-item">
+      <span>Humidity</span>
+      <strong>{{ current.humidity }}%</strong>
+    </div>
+  </div>
+</div>
